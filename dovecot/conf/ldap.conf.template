@@ -1,0 +1,3 @@
+URI          {{LDAP_HOSTNAME}}
+TIMELIMIT    2
+TLS_REQCERT  never

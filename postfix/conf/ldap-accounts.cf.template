@@ -1,0 +1,9 @@
+server_host = ldap://{{LDAP_HOSTNAME}}
+start_tls = yes
+bind = yes
+bind_dn = {{LDAP_DN}}
+bind_pw = {{LDAP_PASSWORD}}
+version = 3
+search_base = {{LDAP_USERS}}
+query_filter =  (&(objectClass=mozillaOrgPerson)(|(mail=%s)(mozillaSecondEmail=%s)))
+result_attribute = mail, mozillaSecondMail

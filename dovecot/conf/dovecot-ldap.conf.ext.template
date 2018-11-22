@@ -1,0 +1,10 @@
+uris = ldap://{{LDAP_HOSTNAME}}
+tls = yes
+dn = {{LDAP_DN}}
+dnpass = {{LDAP_PASSWORD}}
+debug_level = 0
+auth_bind = yes
+ldap_version = 3
+base = {{LDAP_USERS}}
+scope = subtree
+pass_filter =  (&(objectClass=mozillaOrgPerson)(|(mail=%u)(mozillaSecondEmail=%u)(uid=%u)))

@@ -1,0 +1,9 @@
+server_host = ldap://{{LDAP_HOSTNAME}}
+start_tls = yes
+bind = yes
+bind_dn = {{LDAP_DN}}
+bind_pw = {{LDAP_PASSWORD}}
+version = 3
+search_base = {{LDAP_ALIASES}}
+query_filter = (&(objectClass=inetOrgPerson)(uid=%s))
+result_attribute = homePostalAddress
